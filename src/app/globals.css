@@ -1,26 +1,88 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-ui), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+}
+
+.font-display { font-family: var(--font-display), ui-serif, Georgia, "Times New Roman", serif; }
+.font-ui { font-family: var(--font-ui), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji"; }
+
+.h1-fluid { font-size: clamp(2.4rem, 2.2rem + 2vw, 5rem); line-height: 1.05; letter-spacing: -0.015em; }
+.h2-fluid { font-size: clamp(1.6rem, 1.4rem + 1vw, 2.6rem); line-height: 1.12; }
+
+.wordmark {
+    -webkit-text-stroke: 0.5px rgba(0,0,0,0.08);
+    text-shadow: 0 1px 0 #fff, 0 12px 20px rgba(0,0,0,.10);
+}
+
+@layer base {
+    :root {
+        --background: 48 33% 94%; /* warm cream */
+        --foreground: 20 14% 4%; /* charcoal */
+        --card: 0 0% 100%;
+        --card-foreground: 20 14% 4%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 20 14% 4%;
+        --primary: 45 100% 51%; /* #FFC107 - keeping yellow for brand recognition */
+        --primary-foreground: 20 14% 4%;
+        --secondary: 48 33% 90%;
+        --secondary-foreground: 20 14% 4%;
+        --muted: 48 33% 88%;
+        --muted-foreground: 20 14% 40%;
+        --accent: 1 79% 52%; /* #E53935 - chilli-red */
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 48 33% 85%;
+        --input: 48 33% 90%;
+        --ring: 1 79% 52%;
+        --chart-1: 12 76% 61%;
+        --chart-2: 173 58% 39%;
+        --chart-3: 197 37% 24%;
+        --chart-4: 43 74% 66%;
+        --chart-5: 27 87% 67%;
+        --radius: 0.75rem; /* rounded-xl */
+
+        /* Hero Gradient Colors */
+        --color-saffron: 41 100% 51%; /* #FFB703 */
+        --color-mango: 48 100% 79%;   /* #FFE39A */
+        --color-cream: 50 100% 94%;   /* #FFF8E1 */
+    }
+    .dark {
+        --background: 20 14% 4%;
+        --foreground: 0 0% 98%;
+        --card: 20 14% 4%;
+        --card-foreground: 0 0% 98%;
+        --popover: 20 14% 4%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 45 100% 51%;
+        --primary-foreground: 20 14% 4%;
+        --secondary: 20 14% 10%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 20 14% 10%;
+        --muted-foreground: 0 0% 60%;
+        --accent: 1 79% 52%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 20 14% 15%;
+        --input: 20 14% 15%;
+        --ring: 1 79% 52%;
+        --chart-1: 220 70% 50%;
+        --chart-2: 160 60% 45%;
+        --chart-3: 30 80% 55%;
+        --chart-4: 280 65% 60%;
+        --chart-5: 340 75% 55%;
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
 }

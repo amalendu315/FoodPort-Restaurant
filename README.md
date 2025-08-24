@@ -1,36 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **App Name**: Foodport
 
-## Getting Started
+## Core Features:
 
-First, run the development server:
+- Menu Display: Display the menu categories and items in a user-friendly manner, including filtering and search options.
+- Cart and Checkout: Implement a cart system with Half/Full variant and quantity support, a sticky cart drawer, and checkout functionality.
+- User Authentication: Provide user authentication with phone number, email/password, and Google Sign-In, with phone verification for checkout.
+- Order Tracking: Show real-time updates using a stepper, so users can see their order status in the UI, from pending to delivered.
+- Order Notifications: On success, ensure order details will be automatically emailed or SMSed to customer. Use Firebase extensions to achieve this functionality. Includes order and link for tracking.
+- Personalized Recommendations: AI tool suggesting personalized menu item recommendations to users based on their order history.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Style Guidelines:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Primary color: Warm yellow (#FFC107) to evoke appetite and energy, reminiscent of Indian spices.
+- Background color: Light yellow (#FFF9C4), a desaturated tint of the primary, provides a warm and inviting backdrop.
+- Accent color: Deep red (#E53935), analogous to yellow but distinct, highlights key CTAs and important info.
+- Body font: 'PT Sans' (sans-serif) is a friendly, modern font appropriate for text or headlines. Its balanced design ensures readability and a contemporary aesthetic.
+- Headline font: 'Playfair' (serif), should any section title demand greater elegance; pair with PT Sans for body.
+- Use clear, simple icons to represent menu categories and order status, with consistent styling to match the brand.
+- Subtle animations and transitions to provide feedback and guide users through the ordering process smoothly.
