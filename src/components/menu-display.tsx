@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { useState, useMemo } from 'react';
@@ -24,7 +25,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
 import { Search, X, Filter } from 'lucide-react';
 import { MenuItemCard } from './menu-item-card';
-import Paginator from "./paginator"
+import Paginator from './paginator';
 import { ScrollArea } from './ui/scroll-area';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 import { formatINR } from '@/lib/currency';
@@ -232,7 +233,7 @@ export function MenuDisplay({ menuItems, menuCategories, onAddToCart }: MenuDisp
                         {/* Results Grid */}
                         {paginatedItems.length > 0 ? (
                             <>
-                                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
                                     {paginatedItems.map(item => (
                                         <MenuItemCard key={item.id} item={item} onAddToCart={onAddToCart} />
                                     ))}

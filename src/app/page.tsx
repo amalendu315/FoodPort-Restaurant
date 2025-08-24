@@ -10,6 +10,7 @@ import { AuthModal } from '@/components/auth-modal';
 import { Footer } from '@/components/footer';
 import { useToast } from '@/hooks/use-toast';
 import { menuItems as allItems, menuCategories } from '@/lib/data';
+import { CategoryGallery } from '@/components/category-gallery';
 
 export default function Home() {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -106,6 +107,7 @@ export default function Home() {
         />
         <main className="flex-1">
           <Hero />
+          <CategoryGallery menuCategories={menuCategories} />
           <MenuDisplay
               menuItems={allItems}
               menuCategories={menuCategories}
